@@ -1,65 +1,32 @@
-     data set       Eff. bw
-CTAs 1
-       192 kB      7488 kB       908 GB/s
- CTAs 2
-       192 kB      7488 kB      1311 GB/s
- CTAs 3
-       192 kB      7488 kB      1613 GB/s
- CTAs 4
-       192 kB      7488 kB      1751 GB/s
- CTAs 5
-       192 kB      7488 kB      1903 GB/s
- CTAs 6
-       192 kB      7488 kB      1992 GB/s
- CTAs 7
-       192 kB      7488 kB      2068 GB/s
- CTAs 8
-       192 kB      7488 kB      2122 GB/s
- CTAs 9
-       192 kB      7488 kB      2167 GB/s
- CTAs 10
-       192 kB      7488 kB      2209 GB/s
- CTAs 11
-       192 kB      7488 kB      2240 GB/s
- CTAs 12
-       192 kB      7488 kB      2284 GB/s
- CTAs 13
-       192 kB      7488 kB      2310 GB/s
- CTAs 14
-       192 kB      7488 kB      2344 GB/s
- CTAs 15
-       192 kB      7488 kB      2360 GB/s
- CTAs 16
-       192 kB      7488 kB      2360 GB/s
- CTAs 17
-       192 kB      7488 kB      2376 GB/s
- CTAs 18
-       192 kB      7488 kB      2397 GB/s
- CTAs 19
-       192 kB      7488 kB      2410 GB/s
- CTAs 20
-       192 kB      7488 kB      2431 GB/s
- CTAs 21
-       192 kB      7488 kB      2439 GB/s
- CTAs 22
-       192 kB      7488 kB      2438 GB/s
- CTAs 23
-       192 kB      7488 kB      2458 GB/s
- CTAs 24
-       192 kB      7488 kB      2461 GB/s
- CTAs 25
-       192 kB      7488 kB      2467 GB/s
- CTAs 26
-       192 kB      7488 kB      2483 GB/s
- CTAs 27
-       192 kB      7488 kB      2499 GB/s
- CTAs 28
-       192 kB      7488 kB      2494 GB/s
- CTAs 29
-       192 kB      7488 kB      2498 GB/s
- CTAs 30
-       192 kB      7488 kB      2501 GB/s
- CTAs 31
-       192 kB      7488 kB      2506 GB/s
- CTAs 32
-       192 kB      7488 kB      2517 GB/s
+   907.854
+      1311
+      1579
+      1751
+      1874
+      1966
+      2068
+      2122
+      2167
+      2209
+      2240
+      2266
+      2289
+      2328
+      2345
+      2346
+      2373
+      2388
+      2398
+      2419
+      2428
+      2438
+      2445
+      2453
+      2467
+      2474
+      2478
+      2483
+      2489
+      2493
+      2504
+      2509

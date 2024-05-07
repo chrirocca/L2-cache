@@ -13,10 +13,10 @@ plt.rcParams['xtick.labelsize'] = 12
 plt.rcParams['ytick.labelsize'] = 12
 
 # Read the files, skipping the first 3 lines
-df1 = pd.read_csv('1warps.txt', delim_whitespace=True, header=None, skiprows=3)
-df8 = pd.read_csv('8warps.txt', delim_whitespace=True, header=None, skiprows=3)
-df1_global = pd.read_csv('global memory/1warp.txt', delim_whitespace=True, header=None)
-df8_global = pd.read_csv('global memory/8warp.txt', delim_whitespace=True, header=None)
+df1 = pd.read_csv('L2/gpu-l2-cache/1warps.log', delim_whitespace=True, header=None, skiprows=0)
+df8 = pd.read_csv('L2/gpu-l2-cache/8warps.log', delim_whitespace=True, header=None, skiprows=0)
+df1_global = pd.read_csv('globalMem/gpu-l2-cache/1warps.log', delim_whitespace=True, header=None)
+df8_global = pd.read_csv('globalMem/gpu-l2-cache/8warps.log', delim_whitespace=True, header=None)
 
 # Extract the first column
 data1 = df1[0]
@@ -54,12 +54,12 @@ popt, pcov = curve_fit(logistic, range(1, len(data8_global) + 1), data8_global, 
 plt.plot(range(1, len(data8_global) + 1), logistic(range(1, len(data8_global) + 1), *popt), 'k--', color='gray')
 
 # Add labels and title
-plt.xlabel('CTAs per SM')
+plt.xlabel('Thread Blocks per CU')
 plt.ylabel('Bandwidth (GB/s)')
 
 # Set x-axis and y-axis limits and ticks
 plt.xticks(range(0, 33, 4))  # Show one tick every 4 for x-axis
-plt.yticks(range(0, 2401, 400))  # Show from 0 to 2400 for y-axis, one tick every 400
+plt.yticks(range(0, 3001, 400))  # Show from 0 to 2400 for y-axis, one tick every 400
 
 # Add legend outside the plot with a black border
 legend = plt.legend(loc='lower center', bbox_to_anchor=(0.5, 1.0), fancybox=False, shadow=False, ncol=4, fontsize=12)

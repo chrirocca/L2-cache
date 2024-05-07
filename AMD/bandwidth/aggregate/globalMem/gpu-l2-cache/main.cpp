@@ -80,7 +80,7 @@ void measure(int blockRun, int blockCount, int blockSize) {
   double bw = blockDV * blockCount / time.minValue() / 1.0e9;
   double blockRunValue = blockDV * blockRun / 1024;
 
-  if(blockRunValue > 7000 && blockRunValue < 8000) {
+  if(blockRunValue > 400000 && blockRunValue < 450000) {
     cout<< setw(10) << bw << "\n"                                  //
         << fixed << setprecision(0) << setw(6);
   }
@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
   int blockSize = 64*atoi(argv[2]);
 
   for (int blockCount = smCount; blockCount <= smCount*atoi(argv[1]); blockCount += smCount) {
-    for (int i = 2; i < 10000; i += max(1.0, i * 0.1)) {
+    for (int i = 2; i < 20000; i += max(1.0, i * 0.1)) {
       measure<24>(i, blockCount, blockSize);
     }
   }
