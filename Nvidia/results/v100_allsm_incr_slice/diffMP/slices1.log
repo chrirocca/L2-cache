@@ -1,0 +1,7 @@
+==10246== NVPROF is profiling process 10246, command: ./Leakage 1
+==10246== Some kernel(s) will be replayed on device 3 in order to collect all events/metrics.
+==10246== Profiling application: ./Leakage 1
+==10246== Profiling result:
+         Device   Context    Stream                Kernel  l2_tex_read_throughput  l2_tex_write_throughput  l2_read_throughput  l2_write_throughput
+                                                                             GB/s                     KB/s                GB/s                 KB/s
+Tesla V100-DGXS         1         7  kernel(unsigned int*               85.152830               278.113281           85.157338           280.964844

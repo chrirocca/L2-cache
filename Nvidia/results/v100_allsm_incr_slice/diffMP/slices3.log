@@ -1,0 +1,7 @@
+==10716== NVPROF is profiling process 10716, command: ./Leakage 3
+==10716== Some kernel(s) will be replayed on device 3 in order to collect all events/metrics.
+==10716== Profiling application: ./Leakage 3
+==10716== Profiling result:
+         Device   Context    Stream                Kernel  l2_tex_read_throughput  l2_tex_write_throughput  l2_read_throughput  l2_write_throughput
+                                                                             GB/s                     MB/s                GB/s                 KB/s
+Tesla V100-DGXS         1         7  kernel(unsigned int*              255.508521                16.580030          255.498051           282.952148

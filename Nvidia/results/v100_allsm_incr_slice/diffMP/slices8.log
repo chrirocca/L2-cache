@@ -1,0 +1,7 @@
+==11530== NVPROF is profiling process 11530, command: ./Leakage 8
+==11530== Some kernel(s) will be replayed on device 3 in order to collect all events/metrics.
+==11530== Profiling application: ./Leakage 8
+==11530== Profiling result:
+         Device   Context    Stream                Kernel  l2_tex_read_throughput  l2_tex_write_throughput  l2_read_throughput  l2_write_throughput
+                                                                             GB/s                     MB/s                GB/s                 KB/s
+Tesla V100-DGXS         1         7  kernel(unsigned int*              678.762767                16.528403          678.752020           351.017578
