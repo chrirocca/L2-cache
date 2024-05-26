@@ -1,0 +1,12 @@
+==6248== NVPROF is profiling process 6248, command: ./Leakage 8 3
+==6248== Some kernel(s) will be replayed on device 2 in order to collect all events/metrics.
+==6248== Profiling application: ./Leakage 8 3
+==6248== Profiling result:
+==6248== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-DGXS-32GB (2)"
+    Kernel: kernel(unsigned int*, unsigned int*, unsigned int, unsigned int)
+          1                    l2_tex_read_throughput             L2 Throughput (Texture Reads)  131.08GB/s  131.08GB/s  131.08GB/s
+          1                   l2_tex_write_throughput            L2 Throughput (Texture Writes)  53.669KB/s  53.669KB/s  53.668KB/s
+          1                        l2_read_throughput                     L2 Throughput (Reads)  131.08GB/s  131.08GB/s  131.08GB/s
+          1                       l2_write_throughput                    L2 Throughput (Writes)  62.614KB/s  62.614KB/s  62.613KB/s

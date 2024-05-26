@@ -1,0 +1,12 @@
+==9702== NVPROF is profiling process 9702, command: ./Leakage 8 76
+==9702== Some kernel(s) will be replayed on device 2 in order to collect all events/metrics.
+==9702== Profiling application: ./Leakage 8 76
+==9702== Profiling result:
+==9702== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-DGXS-32GB (2)"
+    Kernel: kernel(unsigned int*, unsigned int*, unsigned int, unsigned int)
+          1                    l2_tex_read_throughput             L2 Throughput (Texture Reads)  675.46GB/s  675.46GB/s  675.46GB/s
+          1                   l2_tex_write_throughput            L2 Throughput (Texture Writes)  276.56KB/s  276.56KB/s  276.56KB/s
+          1                        l2_read_throughput                     L2 Throughput (Reads)  675.46GB/s  675.46GB/s  675.46GB/s
+          1                       l2_write_throughput                    L2 Throughput (Writes)  281.11KB/s  281.11KB/s  281.10KB/s

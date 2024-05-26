@@ -1,0 +1,12 @@
+==8888== NVPROF is profiling process 8888, command: ./Leakage 8 61
+==8888== Some kernel(s) will be replayed on device 2 in order to collect all events/metrics.
+==8888== Profiling application: ./Leakage 8 61
+==8888== Profiling result:
+==8888== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-DGXS-32GB (2)"
+    Kernel: kernel(unsigned int*, unsigned int*, unsigned int, unsigned int)
+          1                    l2_tex_read_throughput             L2 Throughput (Texture Reads)  670.46GB/s  670.46GB/s  670.46GB/s
+          1                   l2_tex_write_throughput            L2 Throughput (Texture Writes)  274.51KB/s  274.51KB/s  274.51KB/s
+          1                        l2_read_throughput                     L2 Throughput (Reads)  670.46GB/s  670.46GB/s  670.46GB/s
+          1                       l2_write_throughput                    L2 Throughput (Writes)  276.76KB/s  276.76KB/s  276.76KB/s
