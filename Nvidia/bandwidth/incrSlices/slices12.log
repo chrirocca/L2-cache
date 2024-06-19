@@ -1,0 +1,7 @@
+==21843== NVPROF is profiling process 21843, command: ./Leakage 12
+==21843== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==21843== Profiling application: ./Leakage 12
+==21843== Profiling result:
+         Device   Context    Stream                Kernel  l2_tex_read_throughput  l2_tex_write_throughput  l2_read_throughput  l2_write_throughput
+                                                                             GB/s                     KB/s                GB/s                 KB/s
+Tesla V100-DGXS         1         7  kernel(unsigned int*             1006.854293               274.864258         1006.855615           276.582031
