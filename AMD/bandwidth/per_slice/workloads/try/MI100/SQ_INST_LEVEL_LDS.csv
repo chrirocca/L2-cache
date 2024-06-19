@@ -1,2 +1,2 @@
 Dispatch_ID,Kernel_Name,GPU_ID,queue-id,queue-index,pid,tid,Grid_Size,Workgroup_Size,LDS_Per_Workgroup,Scratch_Per_Workitem,Arch_VGPR,Accum_VGPR,SGPR,wave_size,sig,obj,SQ_INSTS_LDS,SQ_INST_LEVEL_LDS,SQ_ACCUM_PREV_HIRES,DispatchNs,Start_Timestamp,End_Timestamp,CompleteNs
-0,"k(unsigned int*, unsigned int*, unsigned int, unsigned int) [clone .kd]",2,0,0,995285,995285,122880,1024,0,0,8,8,16,64,0x0,0x7fa2ad632540,0,0,0,9569900368417569,9569926093231401,9569926330750289,9569900614799050
+0,"k(unsigned int*, unsigned int*, unsigned int, unsigned int) [clone .kd]",2,0,0,1115991,1115991,491520,1024,0,0,8,8,16,64,0x0,0x7f474afd8540,0,0,0,9572717392737682,9572741760990105,9572741764518264,9572717403786931

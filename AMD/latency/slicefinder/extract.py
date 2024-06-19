@@ -48,7 +48,7 @@ for sm in sm_range:
     all_values.append(sm_values)
 
 # Open the output file
-with open('address.log', 'w') as outfile:
+with open('address2.log', 'w') as outfile:
     # Transpose the 2D list and write the values to the output file
     for values in zip(*all_values):
         outfile.write('\t'.join(map(str, values)) + '\n')

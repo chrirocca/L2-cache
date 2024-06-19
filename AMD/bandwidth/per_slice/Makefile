@@ -10,7 +10,7 @@ HIP_HOME :=  /opt/rocm
 #NVCCFLAGS   := -std=c++17 -O3 -arch=sm_70 --compiler-options="-O2 -pipe -Wall -fopenmp -g" -Xcompiler -rdynamic --generate-line-info  -Xcompiler \"-Wl,-rpath,$(CUDA_HOME)/extras/CUPTI/lib64/\"
 CCFLAGS     := 
 #LDFLAGS     := -L$(CUDA_HOME)/lib64 -L$(CUDA_HOME)/extras/CUPTI/lib64 -lcupti -lcuda   -lnvidia-ml -lnvperf_host -lnvperf_target
-NAME 		:= latency
+NAME 		:= 1SM
 PREFIX		:= .
 #INCLUDES 	:=  -I$(CUDA_HOME)/extras/CUPTI/include -I$(CUDA_HOME)/include
 
@@ -21,10 +21,10 @@ PREFIX		:= .
 #main.hip: main.cu
 #	hipify-perl main.cu > main.hip
 
-$(PREFIX)/hip-$(NAME): latency.cpp 
+$(PREFIX)/hip-$(NAME): 1SM.cpp 
 	hipcc -std=c++20 -I$(HIP_HOME)/include/rocprofiler/ -I$(HIP_HOME)/hsa/include/hsa -L$(HIP_HOME)/rocprofiler/lib -lrocprofiler64 -lhsa-runtime64 -ldl -o $@ $<
 
 clean:
 	rm -f ./cuda-$(NAME)
-	rm -f latency.cpp
+	rm -f 1SM.cpp
 	rm -f ./hip-$(NAME)

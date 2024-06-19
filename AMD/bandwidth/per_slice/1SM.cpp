@@ -6,7 +6,7 @@
 #define NUM_SM 120
 #define BLOCK_SIZE 64 // related with tid*N°
 #define S_SIZE ((8*1024)*1024)/16 // must be smaller than L2 cache size
-#define ITERATION 1000000
+#define ITERATION 10000
 
 typedef unsigned int uint;
 
@@ -77,16 +77,53 @@ __global__ void k(unsigned int *a0, unsigned int *a1, unsigned int start_idx, un
     unsigned int tx = threadIdx.x%64;
     unsigned int temp = warp%8;
     
-    if(sm_id == sm_chosen) 
+    if(sm_id == sm_chosen && start_idx%2 == 0) 
     {
-
+        if(warp <8){
         for (i = 0; i < ITERATION; i ++)
         {
 
 
-            a0[(tx%8)*start_idx+temp*8]+= a1[0];
+            a0[temp*32*BLOCK_SIZE+tx+start_idx]+= a1[0];
 
 
+
+        }
+        }
+        else{
+        for (i = 0; i < ITERATION; i ++)
+        {
+
+             a0[temp*32*BLOCK_SIZE+tx+start_idx+256*BLOCK_SIZE+BLOCK_SIZE]+= a1[64];
+
+
+
+        }
+        }
+        
+    }
+    else if(sm_id == sm_chosen && start_idx%2 == 1) 
+    {
+        if(warp <8){
+        for (i = 0; i < ITERATION; i ++)
+        {
+
+
+            a0[temp*32*BLOCK_SIZE+tx+start_idx]+= a1[0];
+
+
+
+        }
+        }
+        else{
+        for (i = 0; i < ITERATION; i ++)
+        {
+
+             a0[temp*32*BLOCK_SIZE+tx+start_idx+256*BLOCK_SIZE-BLOCK_SIZE]+= a1[64];
+
+
+
+        }
         }
         
     }
@@ -118,7 +155,7 @@ int main(int argc, char * argv[]) {
     hipMemcpy(d_a1, h_arr, sizeof(unsigned int) * S_SIZE, hipMemcpyHostToDevice);
     hipCheckError();
 
-    k<<<NUM_SM, BLOCK_SIZE*16>>>(d_a0,d_a1,start_idx,sm_chosen);
+    k<<<NUM_SM*4, BLOCK_SIZE*16>>>(d_a0,d_a1,start_idx,sm_chosen);
     hipCheckError();
     hipDeviceSynchronize();
     hipCheckError();
