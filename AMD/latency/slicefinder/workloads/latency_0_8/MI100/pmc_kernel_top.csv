@@ -1,0 +1,2 @@
+Kernel_Name,Count,Sum(ns),Mean(ns),Median(ns),Pct
+"k(unsigned int*, unsigned int*, unsigned int, unsigned int) [clone .kd]",1,20270663.0,20270663.0,20270663.0,100.0
