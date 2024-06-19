@@ -60,7 +60,7 @@ for (int h=0;h<32;h++){
 }
     __syncthreads();
 
-if (sm_id == 0||sm_id==1||sm_id==12||sm_id==13||sm_id==24||sm_id==25||sm_id==36||sm_id==37||sm_id==48||sm_id==49||sm_id==60||sm_id==61||sm_id==70||sm_id==71){
+//if (sm_id == 0||sm_id==1||sm_id==12||sm_id==13||sm_id==24||sm_id==25||sm_id==36||sm_id==37||sm_id==48||sm_id==49||sm_id==60||sm_id==61||sm_id==70||sm_id==71){
         for (int i = 0; i < ITERATION; i ++){
             if (tx<=tx_max) {
             for (int n=0;n<max_slice;n++){
@@ -72,7 +72,7 @@ if (sm_id == 0||sm_id==1||sm_id==12||sm_id==13||sm_id==24||sm_id==25||sm_id==36|
         }
     a0[0] = k[0];
     }
-}
+//}
     
     
 int main(int argc, char * argv[]) {
